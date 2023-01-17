@@ -48,7 +48,7 @@ public class Ex02 {
 	}
 
 	public static void mostrarFuncions() {
-		System.out.println("\nFuncions disponibles");
+		System.out.println("\nFuncions disponibles:");
 		System.out.println("A. Màxim nombre del vector");
 		System.out.println("B. Mínim nombre del vector");
 		System.out.println("C. Mitjana del vector");
@@ -97,13 +97,7 @@ public class Ex02 {
 
 	public static int posicionsVector(double[] vector) {
 
-		double sumaTotal = 0;
-
-		for (int i = 0; i < vector.length; i++) {
-			sumaTotal += vector[i];
-		}
-
-		double mitjana = sumaTotal / vector.length;
+		double mitjana = mitjanaVector(vector);
 
 		int contador = 0;
 
