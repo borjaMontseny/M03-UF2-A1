@@ -85,6 +85,8 @@ public class Ex04 {
 		System.out.println("Valor B: ");
 		double valorB = sc.nextDouble();
 
+		sc.close();
+
 		double resultat = valorA * valorB;
 
 		return resultat;
@@ -99,6 +101,8 @@ public class Ex04 {
 
 		System.out.println("Valor B: ");
 		double valorB = sc.nextDouble();
+
+		sc.close();
 
 		double resultat = valorA / valorB;
 
