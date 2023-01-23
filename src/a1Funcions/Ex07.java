@@ -19,37 +19,40 @@ public class Ex07 {
 		int numero = sc.nextInt();
 
 		if (esPrimo(numero)) {
-			System.out.println("Es número primo");
+			System.out.println("\nEs número primo\n");
 		} else {
-			System.out.println("No es número primo");
+			System.out.println("\nNo es número primo\n");
 		}
 
 		sc.close();
 
+		secuenciaPrima(numero);
+
 	}
 
 	public static boolean esPrimo(int numero) {
-		// El 0, 1 y 4 no son primos
-		if (numero == 0 || numero == 1 || numero == 4) {
+
+		if (numero <= 1) {
 			return false;
 		}
-		for (int x = 2; x < numero / 2; x++) {
-			// Si es divisible por cualquiera de estos números, no
-			// es primo
-			if (numero % x == 0)
-				return false;
+
+		int contador = 0;
+
+		// bucle que cuenta los numeros divisibles
+		for (int i = (int) Math.sqrt(numero); i > 1; i--) {
+			if (numero % i == 0) {
+				contador++;
+			}
 		}
-		// Si no se pudo dividir por ninguno de los de arriba, sí es primo
-		return true;
+
+		return contador < 1;
 	}
 
 	public static void secuenciaPrima(int numero) {
 
-		for (int i = numero; i < 0; i--) {
+		for (int i = numero; i > 0; i--) {
 			if (esPrimo(i)) {
-				System.out.println(i + " ");
-			} else {
-				System.out.println(" ");
+				System.out.print(i + " ");
 			}
 		}
 
