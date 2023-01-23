@@ -9,20 +9,21 @@ public class Ex08 {
 
 		// Concatenar vectors
 
-		int array1[] = crearArray();
+		Scanner sc = new Scanner(System.in);
 
-		omplirArray(array1);
+		int array1[] = crearArray(sc);
 
-		int array2[] = crearArray();
+		omplirArray(sc, array1);
 
-		omplirArray(array2);
-		
-		
+		int array2[] = crearArray(sc);
+
+		omplirArray(sc, array2);
+
+		sc.close();
 
 	}
 
-	public static int[] crearArray() {
-		Scanner sc = new Scanner(System.in);
+	public static int[] crearArray(Scanner sc) {
 
 		System.out.print("Num de posicions del array? ");
 
@@ -30,22 +31,17 @@ public class Ex08 {
 
 		int array[] = new int[posArray];
 
-		sc.close();
-
 		return array;
 
 	}
 
-	public static void omplirArray(int[] array) {
-
-		Scanner sc = new Scanner(System.in);
+	public static void omplirArray(Scanner sc, int[] array) {
 
 		for (int i = 0; i < array.length; i++) {
 			System.out.print("Valor de la posició " + i + ": ");
 			array[i] = sc.nextInt();
 		}
 
-		sc.close();
 	}
 
 }
