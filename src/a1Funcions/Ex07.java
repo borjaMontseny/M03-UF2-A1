@@ -19,9 +19,9 @@ public class Ex07 {
 		int numero = sc.nextInt();
 
 		if (esPrimo(numero)) {
-			System.out.println("\nEs número primo\n");
+			System.out.println("Es número primo\n");
 		} else {
-			System.out.println("\nNo es número primo\n");
+			System.out.println("No es número primo\n");
 		}
 
 		sc.close();
@@ -50,7 +50,10 @@ public class Ex07 {
 
 	public static void secuenciaPrima(int numero) {
 
-		for (int i = numero; i > 0; i--) {
+		System.out.println("Secuencia Prima:");
+
+		// es lo mismo i > 0 que i >= 1 FOR INVERSO
+		for (int i = (numero -1); i >= 1; i--) {
 			if (esPrimo(i)) {
 				System.out.print(i + " ");
 			}

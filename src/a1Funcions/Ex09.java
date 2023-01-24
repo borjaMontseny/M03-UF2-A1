@@ -21,7 +21,7 @@ public class Ex09 {
 
 		case 'B':
 			double dinersDE = dolarsAEuros(diners);
-			System.out.println("\n" + diners + "$ =" + dinersDE + "€");
+			System.out.println("\n" + diners + "$ = " + dinersDE + "€");
 			break;
 
 		default:

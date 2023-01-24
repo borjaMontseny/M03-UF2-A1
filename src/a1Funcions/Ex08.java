@@ -15,9 +15,19 @@ public class Ex08 {
 
 		omplirArray(sc, array1);
 
+		ordenarArray(array1);
+
 		int array2[] = crearArray(sc);
 
 		omplirArray(sc, array2);
+
+		ordenarArray(array2);
+
+		int[] array3 = concatenarArray(array1, array2);
+
+		ordenarArray(array3);
+
+		mostrarArray(array3);
 
 		sc.close();
 
@@ -42,6 +52,50 @@ public class Ex08 {
 			array[i] = sc.nextInt();
 		}
 
+	}
+
+	public static void ordenarArray(int array[]) {
+
+		// Usamos un bucle anidado
+		for (int i = 0; i < (array.length - 1); i++) {
+			for (int j = i + 1; j < array.length; j++) {
+				if (array[i] > array[j]) {
+					// Intercambiamos valores
+					int variableauxiliar = array[i];
+					array[i] = array[j];
+					array[j] = variableauxiliar;
+
+				}
+			}
+		}
+	}
+
+	public static int[] concatenarArray(int[] array1, int[] array2) {
+
+		int tamanyArray3 = array1.length + array1.length;
+
+		int array3[] = new int[tamanyArray3];
+
+		int contadorComodin = 0;
+
+		for (int j = 0; j < array1.length; j++) {
+			array3[contadorComodin] = array1[j];
+			contadorComodin++;
+		}
+
+		for (int j = 0; j < array2.length; j++) {
+			array3[contadorComodin] = array2[j];
+			contadorComodin++;
+		}
+
+		return array3;
+
+	}
+
+	public static void mostrarArray(int[] array) {
+		for (int i = 0; i < array.length; i++) {
+			System.out.print(array[i] + " ");
+		}
 	}
 
 }
